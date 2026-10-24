@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#160d19">
+    <title>Summmu day💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PAGE 1: MAKE A WISH -->
+    <section id="wishScreen" class="screen active">
+        <div class="star-field" aria-hidden="true"></div>
+
+        <div class="wish-content">
+            <p class="eyebrow">A little surprise for My Love</p>
+
+            <h1 class="wish-title">Summu's Day</h1>
+            <p class="wish-subtitle">Close your eyes and make a wish for happiness♡</p>
+
+            <div class="birthday-cake" id="birthdayCake">
+                <div class="cake-candles">
+                    <div class="candle">
+                        <span class="flame"></span>
+                        <span class="wick"></span>
+                    </div>
+                    <div class="candle">
+                        <span class="flame"></span>
+                        <span class="wick"></span>
+                    </div>
+                    <div class="candle">
+                        <span class="flame"></span>
+                        <span class="wick"></span>
+                    </div>
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+                <div class="cake-plate"></div>
+            </div>
+
+            <p id="wishMessage" class="wish-message">
+                Make a beautiful wish, Betuu
+            </p>
+
+            <button id="blowCandlesButton" class="magic-button">
+                Send your wish to God!
+            </button>
+
+            <button id="wishContinueButton" class="text-button hidden"
+                    data-go="passwordScreen">
+                Your surprises waiting♡
+            </button>
+
+            <button id="replayWishButton" class="text-button">
+                Replay the magic↻
+            </button>
+        </div>
+    </section>
+
+    <!-- PAGE 2: PASSWORD -->
+    <section id="passwordScreen" class="screen">
+        <div class="password-decoration" aria-hidden="true">✦ ♡ ✦</div>
+
+        <div class="password-layout">
+            <div class="birthday-polaroid">
+                <div class="polaroid-photo">
+                    <img src="photos.jpg/6.jpeg"
+                         alt="A special birthday memory"
+                         onerror="this.style.display='none'">
+                    <span class="photo-heart">♡</span>
+                </div>
+                <p class="polaroid-caption">A little memory, just for you</p>
+            </div>
+
+            <div class="password-card">
+                <div class="lock-symbol">🐰</div>
+                <p class="eyebrow">SUMMU'S BIRTHDAY</p>
+                <h1>UNLOCK IT SUMMU!</h1>
+                <p class="muted-text">Abhi shock ni hone ka bidu abhi to bhot kuch baaki hai</p>
+
+                <form id="passwordForm">
+                    <label class="sr-only" for="passwordInput">
+                        Chalo password daalo
+                    </label>
+
+                    <input id="passwordInput"
+                           type="password"
+                           maxlength="12"
+                           placeholder="fass fass enter karo ab!"
+                           autocomplete="off"
+                           required>
+
+                    <button type="submit" class="magic-button">
+                        Tap to see my feelings♡
+                    </button>
+                </form>
+
+                <p id="teddyError" class="error-message" aria-live="polite"></p>
+                <p class="password-hint">Hint: Delhi aajao khila dungi😉</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: HAPPY BIRTHDAY -->
+    <section id="birthdayScreen" class="screen birthday-screen">
+        <div class="birthday-glow" aria-hidden="true"></div>
+        <div class="birthday-sparkles" aria-hidden="true"></div>
+
+        <div class="birthday-welcome">
+            <p class="eyebrow">The speacial Dayy</p>
+
+            <div class="birthday-heart-frame" aria-hidden="true">
+                <span class="heart-outline">♡</span>
+                <span class="heart-glow">♥</span>
+                <span class="heart-sparkle">✦</span>
+            </div>
+
+            <p class="script-line">With all my heart...</p>
+
+            <h1 class="birthday-heading">
+                Happiestt Birthdayyy
+                <span>to My Summuuu!</span>
+            </h1>
+
+            <p class="birthday-subheading">
+                I love youu very muchhhhh my Baby💗
+            </p>
+            
+            
+            <button type="button" id="birthdayHeartsButton" class="magic-button">
+                Tap to get my heart!
+            </button>
+
+            <button class="magic-button" data-go="optionsScreen">
+                Let see more surprises♡
+            </button>
+
+        </div>
+    </section>
+
+    <!-- PAGE 4: FOUR MAIN OPTIONS -->
+    <section id="optionsScreen" class="screen">
+        <div class="page-heading">
+            <p class="eyebrow">Made with love, just for My Love</p>
+            <h1>Choose Your stuff</h1>
+            <p>Tiny surprises for very special person.</p>
+        </div>
+
+        <div class="options-grid">
+
+            
+            <button class="option-card book-option" data-go="bookScreen">
+                <span class="option-icon">📸</span>
+                <span class="option-title">A Wall Full of Us</span>
+                <span class="option-description">
+                    Little and Cute pictures, endless memories ♡
+                </span>
+                <span class="option-arrow">Visit our photos wall →</span>
+            </button>
+
+            <button class="option-card arrow-option" data-go="arrowScreen">
+                <span class="option-icon">🏹</span>
+                <span class="option-title">Cupid's Arrow</span>
+                <span class="option-description">
+                    An arrow with My feelings
+                </span>
+                <span class="option-arrow">Take your shot →</span>
+            </button>
+
+            <button class="option-card kuchu-option" data-go="kuchuScreen">
+                <span class="option-icon">💗</span>
+                <span class="option-title">Kuchu Puchu</span>
+                <span class="option-description">
+                    A birthday made with love
+                </span>
+                <span class="option-arrow">See the cutest page →</span>
+            </button>
+
+        </div>
+
+        <button class="text-button" data-go="letterScreen">
+            A little letter for you 💌
+        </button>
+    </section>
+
+    
+    <!-- PHOTO WALL -->
+    <section id="bookScreen" class="screen photo-wall-screen">
+
+        <div class="photo-wall-lights" aria-hidden="true">
+            <div class="fairy-light-string">
+                <span>✦</span><span>♡</span><span>✦</span>
+                <span>♡</span><span>✦</span><span>♡</span>
+                <span>✦</span><span>♡</span><span>✦</span>
+                <span>♡</span><span>✦</span><span>♡</span>
+            </div>
+        </div>
+
+        <div class="photo-wall-heading">
+            <p class="eyebrow">Our cutest little moments</p>
+            <h1>A Wall Full of Us ♡</h1>
+            <p>Every picture holds a little piece of our story.</p>
+        </div>
+
+        <div class="photo-wall-gallery" id="photoWallGallery">
+            <!-- The 31 photo frames will be created using JavaScript. -->
+        </div>
+
+        <p class="photo-wall-footer">
+            Made with whole lots of love 💗
+        </p>
+
+        <button class="text-button" data-go="optionsScreen">
+            ← Back to the surprises
+        </button>
+
+        <!-- Enlarged photo popup -->
+        <div class="photo-lightbox" id="photoLightbox"
+            role="dialog" aria-modal="true"
+            aria-label="Memory photograph" hidden>
+
+            <button type="button" class="lightbox-close"
+                    id="closePhotoLightbox"
+                    aria-label="Close photo">×</button>
+
+            <div class="lightbox-polaroid">
+                <img id="lightboxPhoto" src="" alt="Our special memory">
+                <p>One of my favourite memories ♡</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CUPID'S ARROW -->
+    <section id="arrowScreen" class="screen full-scene arrow-screen">
+        <div class="scene-heading">
+            <p class="eyebrow">A little shot of love</p>
+            <h1>Cupid's Arrow 🏹</h1>
+            <p>Release the arrow to see my feelings for you ♡</p>
+        </div>
+
+        <div id="arrowScene" class="animation-scene arrow-scene">
+            <div id="targetHeart" class="target-heart" aria-label="Glowing heart">
+                ♥
+            </div>
+
+            <div id="cupidArrow" class="cupid-arrow" aria-hidden="true">
+                ➶
+            </div>
+
+            <div id="arrowParticles" class="arrow-particles"
+                 aria-hidden="true"></div>
+        </div>
+
+        <button id="shootArrow" class="magic-button">
+            Release the Arrow 💘
+        </button>
+
+        <button class="text-button" data-go="optionsScreen">
+            ← Back to surprises
+        </button>
+    </section>
+
+    <!-- ARROW REVEAL -->
+    <section id="loveYouScreen" class="screen full-scene love-you-screen">
+        <div class="scene-stars" aria-hidden="true"></div>
+
+        <div class="love-you-content">
+            <div class="love-you-heart" aria-hidden="true">♥</div>
+            <p class="script-line">The bestest speacial dayy for your divu because..</p>
+            <h1>Divu Loves you with all of her heart</h1>
+            <p class="love-you-name">My Summuuuuu♡</p>
+            <div id="loveYouParticles" aria-hidden="true"></div>
+
+            <button class="magic-button" data-go="optionsScreen">
+                There's more for you 💌
+            </button>
+
+            <button type="button" id="millionHeartsButton" class="magic-button">
+                 Send You a Million Hearts 💌
+            </button>
+        </div>
+    </section>
+
+
+    <!-- KUCHU PUCHU BIRTHDAY ANIMATION -->
+    <section id="kuchuScreen" class="screen full-scene kuchu-screen">
+        <div class="scene-stars" aria-hidden="true"></div>
+
+        <div class="kuchu-content">
+            <p class="eyebrow">My favourite little human</p>
+
+            <div class="kitten-heart">
+                <div class="kitten-heart-outline">♡</div>
+                <img src="photos.jpg/7.jpeg"
+                     alt="A special memory"
+                     class="kuchu-photo"
+                     onerror="this.style.display='none'">
+                <span class="kitten-sparkle sparkle-one">✦</span>
+                <span class="kitten-sparkle sparkle-two">✧</span>
+            </div>
+
+            <h1 class="kuchu-title">
+                Happy Birthday
+                <span>Mera pyara sa bacha!</span>
+            </h1>
+
+            <p class="kuchu-love-line">I LOVE YOU SOO MUCHH ♡</p>
+
+            <button class="magic-button" data-go="letterScreen">
+                Read My Little Letter 💌
+            </button>
+        </div>
+    </section>
+
+    <!-- PAGE 5: VINTAGE LOVE LETTER -->
+    <section id="letterScreen" class="screen letter-screen">
+        <div class="letter-background-decoration" aria-hidden="true">
+            ✦ ♡ ✦
+        </div>
+
+        <div class="letter-paper">
+            <div class="letter-top-ornament">❦</div>
+            <p class="letter-date">HAPPIESTT BIRTHDAYY</p>
+
+            <h1>To My Summuu</h1>
+
+            <div class="letter-divider">♡ ❦ ♡</div>
+
+            <div id="letterMessage" class="letter-message">
+                <p>My dearest Summu,</p>
+
+                <p>
+                    You know what You are myyyy littlee and a whole world. 
+                    I can't thinkk anything without youu. Everrr since you
+                    came into my life, everything has been goinnn veryyyy
+                    well. Always remain myy luckyyy charmm my betu.
+                </p>
+
+                <p>
+                    Sending you lotsss of Loveee for becoming the bestest and
+                    and most precious part of my little world, and lotsss of 
+                    kissessssss for Loving me so much!  May your year brings full of
+                    laughter, success, countless reasons to smile and everything you want.
+                </p>
+
+                <p>
+                    I wanted to do Something speacial for you, but since I'm 
+                    not with you right now but I've prepared this little corner
+                    Something for you. I hope this tiny corner of my work brings
+                    a smile to your face and reminds you how special you are for me.
+                    I'll always support you and I'll always keep loving you.
+                </p>
+
+                <p>I love you veryyy muchhhhh!♡</p>
+            </div>
+
+            <p class="letter-signature">With lots of love, always</p>
+            <div class="wax-seal" aria-hidden="true">♥</div>
+        </div>
+
+        <button class="magic-button" data-go="surpriseScreen">
+            Open Your Little Surprise 🎁
+        </button>
+
+        <button class="text-button" data-go="optionsScreen">
+            ← Back to the surprises
+        </button>
+    </section>
+
+    <!-- PAGE 6: DO YOU LOVE ME -->
+    <section id="surpriseScreen" class="screen full-scene surprise-screen">
+    <div class="scene-stars" aria-hidden="true"></div>
+
+    <div class="love-question-content">
+
+        <div class="love-question-heart" aria-hidden="true">
+            💗
+        </div>
+
+        <p class="eyebrow">Ok so my fav question for you...</p>
+
+        <h1 class="love-question-title">
+            Do You Love Me,
+            <span>My Baby Summu?♡</span>
+        </h1>
+
+        <p class="love-question-subtitle">
+            You can say no too!
+        </p>
+
+        <div class="love-question-buttons" id="loveQuestionButtons">
+
+            <button
+                type="button"
+                id="loveYesButton"
+                class="love-answer-button yes-answer-button">
+                YES! 💖
+            </button>
+
+            <button
+                type="button"
+                id="loveNoButton"
+                class="love-answer-button no-answer-button">
+                NO 🙈
+            </button>
+
+        </div>
+
+        <div id="loveAnswerMessage"
+             class="love-answer-message"
+             aria-live="polite"
+             hidden>
+
+            <div class="love-answer-big-heart">💗</div>
+
+            <h2>Hehe, I knew it! 💕</h2>
+
+            <p>
+                Mujhe to pata hi tha ki you love me very much. Isi baat par
+                Sending you lotsss of hug, motuuuuu! ♡
+            </p>
+
+            <button type="button"
+                    class="magic-button"
+                    data-go="endingScreen">
+                One Last Thing... 💌
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- PAGE 7: GROWING HEART FINALE -->
+    <section id="endingScreen" class="screen full-scene ending-screen">
+        <div class="scene-stars" aria-hidden="true"></div>
+
+        <div class="ending-content">
+            <p class="eyebrow">And finally...</p>
+
+            <!-- AUTOMATIC POLAROID PHOTO SLIDESHOW -->
+<div class="ending-memory-gallery" id="endingMemoryGallery">
+
+    <div class="ending-gallery-window">
+        <div class="ending-gallery-track" id="endingGalleryTrack">
+            <!-- Photos will be added automatically using JavaScript -->
+        </div>
+    </div>
+
+    <p class="ending-gallery-caption">
+        Every picture holds a cute memory of us ♡
+    </p>
+
+</div>
+
+            <div id="endingHeart" class="ending-heart" aria-hidden="true">
+                ♥
+            </div>
+
+            <h1 class="ending-title">For You, Always</h1>
+            <p class="ending-message">
+            I hope I've made you birthday a little bit speacial.
+            Today, this little world is yours. ♡
+            </p>
+
+            <button id="finalButton" class="magic-button">
+                Grow One Last Heart 💗
+            </button>
+
+            <button id="restartJourney" class="text-button" data-go="wishScreen">
+                Relive the Surprise ↻
+            </button>
+        </div>
+    </section>
+
+    <!-- SHARED NAVIGATION / ACCESSIBILITY -->
+    <div id="globalHearts" aria-hidden="true"></div>
+
+    <noscript>
+        <p class="noscript-message">
+            Please enable JavaScript to enjoy this birthday surprise.
+        </p>
+    </noscript>
+
+    <script src="script.js"></script>
+</body>
+</html>
